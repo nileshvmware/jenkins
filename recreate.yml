@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: DT
+  namespace: DT-$ENV
+spec:
+  replicas: 2
+  strategy:
+    type: Recreate
+  revisionHistoryLimit: 2
+  selector:8f
+    matchLabels:
+      app: DT
